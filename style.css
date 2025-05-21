@@ -1,0 +1,155 @@
+*{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            header{
+                background-color: #5a71bb;
+                text-align: center;
+                color: white;
+                padding: 20px 0;
+            }
+
+            .lista-cadastro{
+                display: flex;
+                margin:  20px 0;
+                padding: 0 20px;
+
+            }
+            .lista-cadastro input[type=text],
+            .lista-cadastro input[type=number]{
+                flex:1;
+                height: 40px;
+                padding-left: 20px;
+                border: 1px solid #ccc; 
+                border-radius: 4px;
+                margin-right: 10px;
+            }
+            .lista-cadastro input[type=submit]{
+                height: 40px;
+                padding: 0 20px;
+                background-color: #4CAF50; 
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-left: 10px;
+            }
+            .lista-produtos{
+                padding: 0 20px; 
+            }
+            .lista-produto-single{
+                padding: 10px 0;
+                margin: 20px 0;
+                border-bottom: none;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                position: relative;
+            }
+            .lista-produto-single h3{
+                flex: 1;
+                padding: 0;
+                font-size: 1.1rem;
+                width: 100%;
+                order: 1;
+                margin-bottom: 0;
+            }
+            .lista-produto-single h3::after {
+                content: ''; 
+                display: block; 
+                width: 100%; 
+                border-bottom: 1px dotted #000000;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            h3.price-produto{
+                text-align: right;
+                font-size: unset;
+                width: 100%;
+                order: -1;
+                margin-bottom: 5px;
+            }
+            h3.price-produto > span{
+                background-color: #5a71bb;
+                padding: 8px 10px;
+                border-radius: 20px;
+                color: white;
+                font-size: 0.9rem;
+                line-height: 1;
+            }
+            .soma-produto{
+                margin: 15px;
+                text-align: right;
+            }
+            .soma-produto h1 {
+                    font-size: 2rem; 
+                color: #333;
+                }
+            button[name="limpar"]{
+                background-color: #f44336; 
+                color: white; 
+                padding: 10px 20px; 
+                border: none; 
+                border-radius: 5px; 
+                cursor: pointer; 
+                font-size: 16px; 
+                transition: background-color 0.3s ease;
+                width: calc(100% - 40px);
+                margin: 0 20px 20px 20px;
+            }
+            button[name="limpar"]:hover {
+                background-color: #d32f2f;
+            }
+
+            @media screen and (max-width: 768px){
+                header h2 {
+                    font-size: 1.5rem; 
+                    padding: 15px 0;
+                }
+            .lista-cadastro {
+                    flex-direction: column;
+                    padding: 0 15px;
+                    align-items: center;
+                }
+
+                .lista-cadastro input[type=text],
+                .lista-cadastro input[type=number]{
+                    width: 100%;
+                    margin-bottom: 10px;
+                    padding-left: 15px;
+                    margin-right: 0;
+
+                }
+                .lista-cadastro input[type=submit]{
+                    width: 100%;
+                    margin-bottom: 10px;
+                    margin-left: 0;
+                    padding: 10px 20px;
+                }
+                .lista-produtos {
+                    padding: 0 15px;
+                }
+
+                .lista-produto-single h3 {
+                    font-size: 1rem;
+                }
+
+                h3.price-produto > span {
+                    font-size: 0.9rem; 
+                }
+
+                .soma-produto {
+                    margin: 15px;
+                    text-align: center;
+                }
+                .soma-produto h1 {
+                    font-size: 1.8rem;
+                }
+
+                button[name="limpar"] {
+                    width: calc(100% - 30px);
+                    margin: 0 15px 15px 15px;
+                }
+            }
